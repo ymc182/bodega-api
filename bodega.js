@@ -88,7 +88,7 @@ router.get("/traits", async function (req, res) {
 router.get("/owner/:accountId", async function (req, res) {
 	try {
 		if (!req.params.accountId) res.status(400).send("Invalid Account Id");
-		const methodName = "get_owner";
+		const methodName = "traits_by_owner";
 		const data = await (
 			await fetch(
 				NODE_URL,
